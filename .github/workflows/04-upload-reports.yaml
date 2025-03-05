@@ -34,10 +34,14 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
 
-      - name: Upload Test Reports  # Uploads test results as artifacts for later review.
+      - name: Upload Playwright report
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-artifacts  # The artifact name displayed in GitHub Actions.
-          path: |
-            playwright-report/  # Directory containing Playwright's test report.
-            test-results/  # Directory containing detailed test results.
+          name: playwright-report
+          path: playwright-report/
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: test-results/
