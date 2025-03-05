@@ -39,5 +39,5 @@ jobs:
         with:
           name: playwright-artifacts  # The artifact name displayed in GitHub Actions.
           path: |
-            playwright-report  # Directory containing Playwright's test report.
-            test-results  # Directory containing detailed test results.
+            playwright-report/  # Directory containing Playwright's test report.
+            test-results/  # Directory containing detailed test results.
